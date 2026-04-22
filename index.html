@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengumuman Kelulusan 2025-2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .glass-input {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .glow-green {
+      box-shadow: 0 0 60px rgba(34, 197, 94, 0.4), 0 0 100px rgba(34, 197, 94, 0.2);
+    }
+    
+    .glow-orange {
+      box-shadow: 0 0 60px rgba(251, 146, 60, 0.3), 0 0 100px rgba(251, 146, 60, 0.15);
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100%) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes particle-float {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.7;
+      }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes gradient-shift {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+    
+    @keyframes orb-float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      33% {
+        transform: translate(30px, -30px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+    }
+    
+    @keyframes orb-pulse {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.6;
+      }
+    }
+    
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradient-shift 15s ease infinite;
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.4;
+      animation: orb-float 20s ease-in-out infinite, orb-pulse 8s ease-in-out infinite;
+    }
+    
+    .orb-1 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0) 70%);
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+    
+    .orb-2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, rgba(99, 102, 241, 0) 70%);
+      bottom: 15%;
+      right: 10%;
+      animation-delay: -7s;
+    }
+    
+    .orb-3 {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%);
+      top: 50%;
+      left: 50%;
+      animation-delay: -14s;
+    }
+    
+    .animate-fade-slide-up {
+      animation: fadeSlideUp 0.6s ease-out forwards;
+    }
+    
+    .animate-zoom-in {
+      animation: zoomIn 0.5s ease-out forwards;
+    }
+    
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      top: -10px;
+      animation: confetti-fall linear forwards;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(251, 146, 60, 0.5);
+      animation: particle-float 4s ease-in-out infinite;
+    }
+    
+    .spinner {
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 0.8s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse-scale {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+    }
+    
+    @keyframes rotate-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+    
+    @keyframes bounce-in {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes countdown-zoom {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes countdown-pulse {
+      0%, 100% {
+        transform: scale(1);
+        filter: brightness(1);
+      }
+      50% {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+      }
+    }
+    
+    .result-card {
+      animation: fadeSlideUp 0.5s ease-out forwards;
+    }
+    
+    .status-banner {
+      animation: zoomIn 0.6s ease-out forwards;
+    }
+    
+    .loading-overlay {
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .loading-circle {
+      width: 120px;
+      height: 120px;
+      border: 6px solid rgba(168, 85, 247, 0.2);
+      border-top-color: #a855f7;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    .loading-pulse {
+      animation: pulse-scale 1.5s ease-in-out infinite;
+    }
+    
+    .loading-text-shimmer {
+      background: linear-gradient(90deg, #a855f7 0%, #ec4899 50%, #a855f7 100%);
+      background-size: 1000px 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 2s linear infinite;
+    }
+    
+    .loading-dots span {
+      animation: bounce-in 0.6s ease-in-out infinite;
+    }
+    
+    .loading-dots span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .loading-dots span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full overflow-auto">
+  <div id="app-container" class="min-h-full w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden animate-gradient"><!-- Animated Background Elements -->
+   <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+   </div><!-- Confetti Container -->
+   <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div><!-- Dramatic Loading Screen -->
+   <div id="loading-screen" class="hidden fixed inset-0 z-50 loading-overlay flex flex-col items-center justify-center">
+    <div class="text-center space-y-8"><!-- Animated Circle Spinner -->
+     <div class="relative flex items-center justify-center">
+      <div class="loading-circle"></div>
+      <div class="absolute text-6xl loading-pulse">
+       🎓
+      </div>
+     </div><!-- Shimmer Text -->
+     <div class="space-y-3">
+      <h2 class="text-3xl md:text-4xl font-bold loading-text-shimmer">Mengecek Status Anda</h2>
+      <div class="flex items-center justify-center gap-2 text-purple-300 text-xl loading-dots"><span>•</span> <span>•</span> <span>•</span>
+      </div>
+     </div><!-- Progress Messages -->
+     <div class="space-y-2">
+      <p id="loading-message" class="text-purple-200 text-lg font-medium animate-pulse">Menghubungkan ke database...</p>
+     </div>
+    </div>
+   </div><!-- Countdown Screen (3-2-1) -->
+   <div id="countdown-screen" class="hidden fixed inset-0 z-50 loading-overlay flex flex-col items-center justify-center">
+    <div id="countdown-number" class="text-[20rem] md:text-[25rem] font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-400 to-blue-400" style="animation: countdown-zoom 1s ease-in-out; font-family: 'Orbitron', monospace; letter-spacing: 0.1em; text-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(236, 72, 153, 0.4);">
+     3
+    </div>
+   </div><!-- Main Content -->
+   <div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8"><!-- Countdown Timer Section -->
+    <div id="countdown-section" class="w-full max-w-2xl">
+     <div class="glass-card rounded-3xl p-8 md:p-12 text-center"><!-- Logo -->
+      <div class="mb-6"><img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">PENGUMUMAN KELULUSAN<br>
+       2025-2026</h1>
+      <div class="my-8 p-6 bg-purple-500/20 border border-purple-400/30 rounded-2xl">
+       <p class="text-2xl md:text-3xl font-bold text-purple-200 mb-2">⏰</p>
+       <p class="text-lg md:text-xl text-white font-semibold mb-4">Pengumuman Kelulusan Sudah Ditutup Harap Bersabar Untuk Pengumunan Tahun Depan..</p>
+       <p class="text-xl md:text-2xl text-purple-100 font-bold mb-4">Orang Sabar Senyumnya Lebar</p>
+       <p class="text-sm md:text-base text-purple-300 mb-6">Pengumuman akan dibuka pada:</p>
+       <p class="text-lg md:text-xl text-white font-bold mb-6">Selasa, 5 MEI 2026 • 06:30 WIB</p><!-- Countdown Display -->
+       <div class="grid grid-cols-4 gap-3 md:gap-4 mb-6">
+        <div class="bg-white/10 rounded-xl p-4">
+         <div id="days" class="text-3xl md:text-4xl font-bold text-white">
+          00
+         </div>
+         <div class="text-xs md:text-sm text-purple-200 mt-1">
+          Hari
+         </div>
+        </div>
+        <div class="bg-white/10 rounded-xl p-4">
+         <div id="hours" class="text-3xl md:text-4xl font-bold text-white">
+          00
+         </div>
+         <div class="text-xs md:text-sm text-purple-200 mt-1">
+          Jam
+         </div>
+        </div>
+        <div class="bg-white/10 rounded-xl p-4">
+         <div id="minutes" class="text-3xl md:text-4xl font-bold text-white">
+          00
+         </div>
+         <div class="text-xs md:text-sm text-purple-200 mt-1">
+          Menit
+         </div>
+        </div>
+        <div class="bg-white/10 rounded-xl p-4">
+         <div id="seconds" class="text-3xl md:text-4xl font-bold text-white">
+          00
+         </div>
+         <div class="text-xs md:text-sm text-purple-200 mt-1">
+          Detik
+         </div>
+        </div>
+       </div>
+      </div>
+      <p class="text-purple-200 text-sm md:text-base mt-6">Salam SMANSABARU 🎓</p>
+     </div>
+    </div><!-- Input Section -->
+    <div id="input-section" class="hidden w-full max-w-md">
+     <div class="glass-card rounded-3xl p-8 md:p-10 text-center"><!-- Logo -->
+      <div class="mb-6"><img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
+      </div><!-- Title -->
+      <h1 id="main-title" class="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">PENGUMUMAN KELULUSAN 2025-2026</h1><!-- Subtitle -->
+      <p id="subtitle" class="text-purple-200 text-sm md:text-base mb-8">Silakan masukkan NISN untuk melihat hasil</p><!-- Form -->
+      <div class="space-y-4">
+       <div class="relative"><input type="text" id="nisn-input" inputmode="numeric" pattern="[0-9]*" placeholder="Masukkan NISN Anda" class="glass-input w-full px-5 py-4 rounded-xl text-white placeholder-purple-300/60 text-center text-lg focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all duration-300" maxlength="10">
+       </div><button id="check-btn" onclick="checkStatus()" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"> <span id="btn-text">CEK STATUS</span>
+        <div id="btn-spinner" class="spinner hidden"></div></button>
+      </div><!-- Error Message -->
+      <div id="error-message" class="hidden mt-4 p-4 bg-red-500/20 border border-red-400/30 rounded-xl">
+       <p class="text-red-300 text-sm">Data NISN tidak ditemukan. Silakan periksa kembali.</p>
+      </div><!-- Database Connection Status -->
+      <div class="mt-6 flex items-center justify-center gap-2">
+       <div id="db-status-indicator" class="w-2 h-2 rounded-full bg-gray-400 animate-pulse"></div>
+       <p id="db-status-text" class="text-xs text-purple-300/60">Memeriksa koneksi database...</p>
+      </div>
+     </div>
+    </div><!-- Result Section -->
+    <div id="result-section" class="hidden w-full max-w-lg"><!-- Status Banner -->
+     <div id="status-banner" class="mb-6 status-banner relative"><!-- Particles for non-eligible -->
+      <div id="particles-container" class="hidden absolute inset-0 overflow-hidden rounded-2xl pointer-events-none"></div>
+     </div><!-- Result Card -->
+     <div id="result-card" class="glass-card rounded-3xl p-8 md:p-10 result-card relative">
+      <div class="relative z-10">
+       <h2 class="text-xl font-semibold text-white mb-6 text-center">Data Siswa</h2>
+       <div class="space-y-4">
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">Nama Lengkap</span> <span id="result-nama" class="text-white font-medium text-right">-</span>
+        </div>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">NISN</span> <span id="result-nisn" class="text-white font-medium">-</span>
+        </div>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">No, Urut</span> <span id="result-no. urut" class="text-white font-medium">-</span>
+        </div>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">Status</span> <span id="result-status" class="font-bold">-</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Footer -->
+    <div class="mt-8 text-center">
+     <p class="text-purple-300/60 text-xs md:text-sm">Created @2025 by_ach322</p>
+    </div>
+   </div>
+  </div>
+  <script>
+    // Config and SDK setup
+    const defaultConfig = {
+      main_title: "PENGUMUMAN KELULUSAN 2025-2026",
+      subtitle: "Silakan masukkan NISN"
+    };
+    
+    let cachedData = null;
+    let dbConnectionStatus = 'checking'; // 'checking', 'connected', 'error'
+    
+    // Countdown Timer Logic
+    const targetDate = new Date('2027-01-20T06:30:00+07:00'); // 20 Januari 2026, 06:30 WIB
+    
+    function updateCountdown() {
+      const now = new Date();
+      const difference = targetDate - now;
+      
+      if (difference <= 0) {
+        // Time's up! Show the input section
+        document.getElementById('countdown-section').classList.add('hidden');
+        document.getElementById('input-section').classList.remove('hidden');
+        checkDatabaseConnection();
+        return;
+      }
+      
+      // Calculate time units
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      
+      // Update display
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+    
+    // Check if countdown should be shown
+    function initializeApp() {
+      const now = new Date();
+      
+      if (now >= targetDate) {
+        // Show input section immediately
+        document.getElementById('countdown-section').classList.add('hidden');
+        document.getElementById('input-section').classList.remove('hidden');
+        checkDatabaseConnection();
+      } else {
+        // Show countdown and update every second
+        document.getElementById('countdown-section').classList.remove('hidden');
+        document.getElementById('input-section').classList.add('hidden');
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      }
+    }
+    
+    // Check database connection on page load
+    async function checkDatabaseConnection() {
+      const statusIndicator = document.getElementById('db-status-indicator');
+      const statusText = document.getElementById('db-status-text');
+      
+      try {
+        statusIndicator.className = 'w-2 h-2 rounded-full bg-yellow-400 animate-pulse';
+        statusText.textContent = 'Menghubungkan ke database...';
+        
+        const data = await fetchData();
+        
+        if (data && data.length > 0) {
+          dbConnectionStatus = 'connected';
+          statusIndicator.className = 'w-2 h-2 rounded-full bg-green-400';
+          statusText.textContent = `Terhubung ke database • ${data.length} data tersedia`;
+          statusText.className = 'text-xs text-green-300/80';
+        } else {
+          dbConnectionStatus = 'error';
+          statusIndicator.className = 'w-2 h-2 rounded-full bg-orange-400';
+          statusText.textContent = 'Database terhubung tapi tidak ada data';
+          statusText.className = 'text-xs text-orange-300/80';
+        }
+      } catch (error) {
+        dbConnectionStatus = 'error';
+        statusIndicator.className = 'w-2 h-2 rounded-full bg-red-400';
+        statusText.textContent = 'Gagal terhubung ke database';
+        statusText.className = 'text-xs text-red-300/80';
+        console.error('Database connection error:', error);
+      }
+    }
+    
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          const titleEl = document.getElementById('main-title');
+          const subtitleEl = document.getElementById('subtitle');
+          
+          if (titleEl) {
+            titleEl.textContent = config.main_title || defaultConfig.main_title;
+          }
+          if (subtitleEl) {
+            subtitleEl.textContent = config.subtitle || defaultConfig.subtitle;
+          }
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["main_title", config.main_title || defaultConfig.main_title],
+          ["subtitle", config.subtitle || defaultConfig.subtitle]
+        ])
+      });
+    }
+    
+    // Initialize app on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      initializeApp();
+    });
+    
+    // Input validation - only numbers
+    document.getElementById('nisn-input').addEventListener('input', function(e) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+    });
+    
+    // Enter key support
+    document.getElementById('nisn-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        checkStatus();
+      }
+    });
+    
+    async function fetchData() {
+      if (cachedData) return cachedData;
+      
+      const spreadsheetId = '1CfWWSOgQ1LxNgGvUQ3mlhwRRUO2Xq9bBNfSt68l_Udc';
+      const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:csv`;
+      
+      try {
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+        
+        const csvText = await response.text();
+        
+        if (!csvText || csvText.trim() === '') {
+          throw new Error('Empty response');
+        }
+        
+        const lines = csvText.split('\n').filter(line => line.trim() !== '');
+        
+        if (lines.length < 2) {
+          throw new Error('Insufficient data');
+        }
+        
+        const headers = lines[0].split(',').map(h => h.trim().toLowerCase().replace(/['"]/g, ''));
+        
+        const data = [];
+        for (let i = 1; i < lines.length; i++) {
+          const values = parseCSVLine(lines[i]);
+          const row = {};
+          
+          headers.forEach((header, index) => {
+            row[header] = values[index] ? values[index].trim().replace(/['"]/g, '') : '';
+          });
+          
+          // Only add rows with valid data
+          if (row.nisn && row.nisn.trim() !== '') {
+            data.push(row);
+          }
+        }
+        
+        if (data.length > 0) {
+          cachedData = data;
+          return data;
+        }
+        
+        throw new Error('No valid data found');
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+        throw error;
+      }
+    }
+    
+    function parseCSVLine(line) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          result.push(current);
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      
+      result.push(current);
+      return result;
+    }
+    
+    async function checkStatus() {
+      const nisnInput = document.getElementById('nisn-input');
+      const checkBtn = document.getElementById('check-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnSpinner = document.getElementById('btn-spinner');
+      const errorMessage = document.getElementById('error-message');
+      const loadingScreen = document.getElementById('loading-screen');
+      const loadingMessage = document.getElementById('loading-message');
+      
+      const nisn = nisnInput.value.trim();
+      
+      if (!nisn) {
+        showError('Silakan masukkan NISN terlebih dahulu.');
+        return;
+      }
+      
+      // Show button loading
+      checkBtn.disabled = true;
+      btnText.textContent = 'Memuat...';
+      btnSpinner.classList.remove('hidden');
+      errorMessage.classList.add('hidden');
+      
+      // Show dramatic loading screen
+      loadingScreen.classList.remove('hidden');
+      
+      // Dramatic loading messages sequence
+      const messages = [
+        'Menghubungkan ke database...',
+        'Mengambil data siswa...',
+        'Memproses informasi...',
+        'Menyiapkan hasil...'
+      ];
+      
+      let messageIndex = 0;
+      const messageInterval = setInterval(() => {
+        if (messageIndex < messages.length) {
+          loadingMessage.textContent = messages[messageIndex];
+          messageIndex++;
+        }
+      }, 750);
+      
+      try {
+        // Fetch data
+        const data = await fetchData();
+        
+        // Debug: Log pertama data untuk melihat struktur
+        if (data && data.length > 0) {
+          console.log('Sample data row:', data[0]);
+          console.log('Column names:', Object.keys(data[0]));
+        }
+        
+        const student = data.find(row => {
+          const rowNisn = String(row.nisn || '').trim();
+          console.log('Comparing:', rowNisn, 'with', nisn);
+          return rowNisn === nisn;
+        });
+        
+        // Wait for minimum 3 seconds for dramatic effect
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        
+        // Clear message interval
+        clearInterval(messageInterval);
+        
+        if (!student) {
+          loadingScreen.classList.add('hidden');
+          showError('Data NISN tidak ditemukan. Silakan periksa kembali.');
+          checkBtn.disabled = false;
+          btnText.textContent = 'CEK STATUS';
+          btnSpinner.classList.add('hidden');
+          return;
+        }
+        
+        console.log('Found student:', student);
+        
+        // Hide loading screen
+        loadingScreen.classList.add('hidden');
+        
+        // Show countdown screen (3-2-1)
+        const countdownScreen = document.getElementById('countdown-screen');
+        const countdownNumber = document.getElementById('countdown-number');
+        
+        countdownScreen.classList.remove('hidden');
+        
+        // Countdown sequence: 3, 2, 1
+        const countdownSequence = [3, 2, 1];
+        
+        for (let i = 0; i < countdownSequence.length; i++) {
+          countdownNumber.textContent = countdownSequence[i];
+          countdownNumber.style.animation = 'none';
+          
+          // Trigger reflow to restart animation
+          void countdownNumber.offsetWidth;
+          
+          countdownNumber.style.animation = 'countdown-zoom 1s ease-in-out';
+          
+          // Wait 1 second before next number
+          await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+        
+        // Hide countdown screen and show result
+        countdownScreen.classList.add('hidden');
+        showResult(student);
+        
+      } catch (error) {
+        clearInterval(messageInterval);
+        loadingScreen.classList.add('hidden');
+        console.error('Error fetching data:', error);
+        showError('Terjadi kesalahan saat mengambil data. Silakan coba lagi. Error: ' + error.message);
+        checkBtn.disabled = false;
+        btnText.textContent = 'CEK STATUS';
+        btnSpinner.classList.add('hidden');
+      }
+    }
+    
+    function showError(message) {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.querySelector('p').textContent = message;
+      errorMessage.classList.remove('hidden');
+    }
+    
+    function showResult(student) {
+      const inputSection = document.getElementById('input-section');
+      const resultSection = document.getElementById('result-section');
+      const statusBanner = document.getElementById('status-banner');
+      const resultCard = document.getElementById('result-card');
+      const particlesContainer = document.getElementById('particles-container');
+      
+      // Populate data - handle different column name formats
+      const namaLengkap = student['nama lengkap'] || student['NAMA LENGKAP'] || student.nama || student.NAMA || '-';
+      const nisn = student.nisn || student.NISN || '-';
+      const No. Urut = student.No. Urut || student.No. Urut || '-';
+      const statusRaw = student.status || student.STATUS || student.Status || '-';
+      
+      // Get student name for use in both success and error messages
+      const studentName = namaLengkap;
+      
+      document.getElementById('result-nama').textContent = namaLengkap;
+      document.getElementById('result-nisn').textContent = nisn;
+      document.getElementById('result-No. Urut').textContent = No. Urut;
+      
+      const status = String(statusRaw).toUpperCase().trim();
+      const statusEl = document.getElementById('result-status');
+      statusEl.textContent = statusRaw;
+      
+      // Check if status is "LULUS" (not "TIDAK LULUS")
+      const isEligible = status === 'LULUS' || (status.includes('LULUS') && !status.includes('TIDAK'));
+      
+      if (isEligible) {
+        // Success styling
+        statusEl.className = 'font-bold text-green-400';
+        resultCard.classList.add('glow-green');
+        resultCard.classList.remove('glow-orange');
+        particlesContainer.classList.add('hidden');
+        
+        statusBanner.innerHTML = `
+          <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-2xl p-8 text-center glow-green relative overflow-hidden">
+            <div class="text-5xl md:text-6xl mb-4 animate-bounce">🎉</div>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-green-400 mb-3 tracking-wide">SELAMAT!</h2>
+            <p class="text-xl md:text-2xl text-white font-bold mb-3">${studentName}</p>
+            <p class="text-lg md:text-xl text-white font-semibold mb-2">Selamat Anda LULUS</p>
+            <p class="text-green-200/90 text-sm md:text-base">Selamat Dan Sukses Untuk Menggapai Cita cita</p>
+            <div class="mt-4 inline-block px-6 py-2 bg-green-500/30 rounded-full text-green-300 text-sm font-medium">
+              ✓ Eligible
+            </div>
+          </div>
+        `;
+        
+        // Trigger confetti
+        createConfetti();
+        
+      } else {
+        // Non-eligible styling
+        statusEl.className = 'font-bold text-orange-400';
+        resultCard.classList.add('glow-orange');
+        resultCard.classList.remove('glow-green');
+        
+        // Show particles
+        particlesContainer.classList.remove('hidden');
+        createParticles();
+        
+        statusBanner.innerHTML = `
+          <div class="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-2xl p-8 text-center relative overflow-hidden">
+            <div class="text-5xl md:text-6xl mb-4">💪</div>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-orange-400 mb-3 tracking-wide">MOHON MAAF</h2>
+            <p class="text-xl md:text-2xl text-white font-bold mb-3">${studentName}</p>
+            <p class="text-lg md:text-xl text-white font-semibold mb-2">Anda Belum LULUS Di Tahun ini</p>
+            <p class="text-orange-200/90 text-sm md:text-base">Tetap Semangat Untuk Tetap Berjuang Dan Belajar</p>
+          </div>
+        `;
+      }
+      
+      // Show result section
+      inputSection.classList.add('hidden');
+      resultSection.classList.remove('hidden');
+    }
+    
+    function createConfetti() {
+      const container = document.getElementById('confetti-container');
+      container.innerHTML = '';
+      
+      const colors = ['#22c55e', '#10b981', '#34d399', '#6ee7b7', '#fbbf24', '#f472b6', '#a78bfa'];
+      
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        confetti.style.width = (Math.random() * 10 + 5) + 'px';
+        confetti.style.height = (Math.random() * 10 + 5) + 'px';
+        container.appendChild(confetti);
+      }
+      
+      // Clean up after animation
+      setTimeout(() => {
+        container.innerHTML = '';
+      }, 6000);
+    }
+    
+    function createParticles() {
+      const container = document.getElementById('particles-container');
+      container.innerHTML = '';
+      
+      for (let i = 0; i < 15; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 4 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        container.appendChild(particle);
+      }
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1eb1c122de0b95',t:'MTc2OTA4MTE2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+
+
+
