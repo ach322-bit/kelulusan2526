@@ -326,8 +326,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
  </head>
  <body class="h-full overflow-auto">
-  <div id="app-container" class="min-h-full w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden animate-gradient">
-   <!-- Animated Background Elements -->
+  <div id="app-container" class="min-h-full w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden animate-gradient"><!-- Animated Background Elements -->
    <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
@@ -335,8 +334,7 @@
    </div><!-- Confetti Container -->
    <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div><!-- Dramatic Loading Screen -->
    <div id="loading-screen" class="hidden fixed inset-0 z-50 loading-overlay flex flex-col items-center justify-center">
-    <div class="text-center space-y-8">
-     <!-- Animated Circle Spinner -->
+    <div class="text-center space-y-8"><!-- Animated Circle Spinner -->
      <div class="relative flex items-center justify-center">
       <div class="loading-circle"></div>
       <div class="absolute text-6xl loading-pulse">
@@ -345,8 +343,7 @@
      </div><!-- Shimmer Text -->
      <div class="space-y-3">
       <h2 class="text-3xl md:text-4xl font-bold loading-text-shimmer">Mengecek Status Anda</h2>
-      <div class="flex items-center justify-center gap-2 text-purple-300 text-xl loading-dots">
-       <span>•</span> <span>•</span> <span>•</span>
+      <div class="flex items-center justify-center gap-2 text-purple-300 text-xl loading-dots"><span>•</span> <span>•</span> <span>•</span>
       </div>
      </div><!-- Progress Messages -->
      <div class="space-y-2">
@@ -359,13 +356,10 @@
      3
     </div>
    </div><!-- Main Content -->
-   <div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8">
-    <!-- Countdown Timer Section -->
+   <div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8"><!-- Countdown Timer Section -->
     <div id="countdown-section" class="w-full max-w-2xl">
-     <div class="glass-card rounded-3xl p-8 md:p-12 text-center">
-      <!-- Logo -->
-      <div class="mb-6">
-       <img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
+     <div class="glass-card rounded-3xl p-8 md:p-12 text-center"><!-- Logo -->
+      <div class="mb-6"><img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
       </div>
       <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">PENGUMUMAN KELULUSAN<br>
         2025-2026</h1>
@@ -414,16 +408,13 @@
      </div>
     </div><!-- Input Section -->
     <div id="input-section" class="hidden w-full max-w-md">
-     <div class="glass-card rounded-3xl p-8 md:p-10 text-center">
-      <!-- Logo -->
-      <div class="mb-6">
-       <img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
+     <div class="glass-card rounded-3xl p-8 md:p-10 text-center"><!-- Logo -->
+      <div class="mb-6"><img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
       </div><!-- Title -->
       <h1 id="main-title" class="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">PENGUMUMAN KELULUSAN 2025-2026</h1><!-- Subtitle -->
       <p id="subtitle" class="text-purple-200 text-sm md:text-base mb-8">Silakan masukkan NISN untuk melihat hasil</p><!-- Form -->
       <div class="space-y-4">
-       <div class="relative">
-        <input type="text" id="nisn-input" inputmode="numeric" pattern="[0-9]*" placeholder="Masukkan NISN Anda" class="glass-input w-full px-5 py-4 rounded-xl text-white placeholder-purple-300/60 text-center text-lg focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all duration-300" maxlength="10">
+       <div class="relative"><input type="text" id="nisn-input" inputmode="numeric" pattern="[0-9]*" placeholder="Masukkan NISN Anda" class="glass-input w-full px-5 py-4 rounded-xl text-white placeholder-purple-300/60 text-center text-lg focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all duration-300" maxlength="10">
        </div><button id="check-btn" onclick="checkStatus()" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"> <span id="btn-text">CEK STATUS</span>
         <div id="btn-spinner" class="spinner hidden"></div></button>
       </div><!-- Error Message -->
@@ -436,27 +427,21 @@
       </div>
      </div>
     </div><!-- Result Section -->
-    <div id="result-section" class="hidden w-full max-w-lg">
-     <!-- Status Banner -->
-     <div id="status-banner" class="mb-6 status-banner relative">
-      <!-- Particles for non-eligible -->
+    <div id="result-section" class="hidden w-full max-w-lg"><!-- Status Banner -->
+     <div id="status-banner" class="mb-6 status-banner relative"><!-- Particles for non-eligible -->
       <div id="particles-container" class="hidden absolute inset-0 overflow-hidden rounded-2xl pointer-events-none"></div>
      </div><!-- Result Card -->
      <div id="result-card" class="glass-card rounded-3xl p-8 md:p-10 result-card relative">
       <div class="relative z-10">
        <h2 class="text-xl font-semibold text-white mb-6 text-center">Data Siswa</h2>
        <div class="space-y-4">
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
-         <span class="text-purple-200">Nama Lengkap</span> <span id="result-nama" class="text-white font-medium text-right">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">Nama Lengkap</span> <span id="result-nama" class="text-white font-medium text-right">-</span>
         </div>
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
-         <span class="text-purple-200">NISN</span> <span id="result-nisn" class="text-white font-medium">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">NISN</span> <span id="result-nisn" class="text-white font-medium">-</span>
         </div>
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
-         <span class="text-purple-200">No, Urut</span> <span id="result-no-urut" class="text-white font-medium">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">No, Urut</span> <span id="result-no-urut" class="text-white font-medium">-</span>
         </div>
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
-         <span class="text-purple-200">Status</span> <span id="result-status" class="font-bold">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">Status</span> <span id="result-status" class="font-bold">-</span>
         </div>
        </div>
       </div>
@@ -478,7 +463,7 @@
     let dbConnectionStatus = 'checking'; // 'checking', 'connected', 'error'
     
     // Countdown Timer Logic - TANGGAL YANG BENAR: 5 MEI 2026
-    const targetDate = new Date('2026-01-05T06:30:00+07:00');
+    const targetDate = new Date('2026-05-05T06:30:00+07:00');
     
     function updateCountdown() {
       const now = new Date();
@@ -823,51 +808,44 @@
       console.log('Status mentah:', statusRaw);
       console.log('Status uppercase:', status);
       
-      // Check if status is "LULUS" (treat all students as LULUS by default)
-      const isEligible = !status.includes('TIDAK');
+      // All students are LULUS
+      statusEl.className = 'font-bold text-green-400';
+      resultCard.classList.add('glow-green');
+      resultCard.classList.remove('glow-orange');
+      particlesContainer.classList.add('hidden');
       
-      if (isEligible) {
-        // Success styling
-        statusEl.className = 'font-bold text-green-400';
-        resultCard.classList.add('glow-green');
-        resultCard.classList.remove('glow-orange');
-        particlesContainer.classList.add('hidden');
-        
-        statusBanner.innerHTML = `
-          <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-2xl p-8 text-center glow-green relative overflow-hidden">
-            <div class="text-5xl md:text-6xl mb-4 animate-bounce">🎉</div>
-            <h2 class="text-2xl md:text-3xl font-extrabold text-green-400 mb-3 tracking-wide">SELAMAT!</h2>
-            <p class="text-xl md:text-2xl text-white font-bold mb-3">${studentName}</p>
-            <p class="text-lg md:text-xl text-white font-semibold mb-2">Selamat Anda LULUS</p>
-            <p class="text-green-200/90 text-sm md:text-base">Selamat Dan Sukses Untuk Menggapai Cita cita</p>
-            <div class="mt-4 inline-block px-6 py-2 bg-green-500/30 rounded-full text-green-300 text-sm font-medium">
-              ✓ Eligible
-            </div>
-          </div>
+      const sklLink = student['link skl'] || student['LINK SKL'] || student['link_skl'] || '';
+      
+      let sklButton = '';
+      if (sklLink && sklLink.trim() !== '') {
+        sklButton = `
+          <button onclick="downloadSKL('${sklLink}')" class="w-full mt-6 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2">
+            <i data-lucide="download" style="width: 20px; height: 20px;"></i>
+            <span>DOWNLOAD SKL</span>
+          </button>
         `;
-        
-        // Trigger confetti
-        createConfetti();
-        
-      } else {
-        // Non-eligible styling
-        statusEl.className = 'font-bold text-orange-400';
-        resultCard.classList.add('glow-orange');
-        resultCard.classList.remove('glow-green');
-        
-        // Show particles
-        particlesContainer.classList.remove('hidden');
-        createParticles();
-        
-        statusBanner.innerHTML = `
-          <div class="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-2xl p-8 text-center relative overflow-hidden">
-            <div class="text-5xl md:text-6xl mb-4">💪</div>
-            <h2 class="text-2xl md:text-3xl font-extrabold text-orange-400 mb-3 tracking-wide">MOHON MAAF</h2>
-            <p class="text-xl md:text-2xl text-white font-bold mb-3">${studentName}</p>
-            <p class="text-lg md:text-xl text-white font-semibold mb-2">Anda Belum LULUS Di Tahun ini</p>
-            <p class="text-orange-200/90 text-sm md:text-base">Tetap Semangat Untuk Tetap Berjuang Dan Belajar</p>
+      }
+      
+      statusBanner.innerHTML = `
+        <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-2xl p-8 text-center glow-green relative overflow-hidden">
+          <div class="text-5xl md:text-6xl mb-4 animate-bounce">🎉</div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-green-400 mb-3 tracking-wide">SELAMAT!</h2>
+          <p class="text-xl md:text-2xl text-white font-bold mb-3">${studentName}</p>
+          <p class="text-lg md:text-xl text-white font-semibold mb-2">Selamat Anda LULUS</p>
+          <p class="text-green-200/90 text-sm md:text-base">Selamat Dan Sukses Untuk Menggapai Cita cita</p>
+          <div class="mt-4 inline-block px-6 py-2 bg-green-500/30 rounded-full text-green-300 text-sm font-medium">
+            ✓ LULUS
           </div>
-        `;
+          ${sklButton}
+        </div>
+      `;
+      
+      // Trigger confetti
+      createConfetti();
+      
+      // Initialize Lucide icons after adding button
+      if (window.lucide) {
+        lucide.createIcons();
       }
       
       // Show result section
@@ -914,6 +892,16 @@
         container.appendChild(particle);
       }
     }
+    
+    function downloadSKL(sklLink) {
+      if (!sklLink || sklLink.trim() === '') {
+        alert('Link SKL tidak tersedia');
+        return;
+      }
+      
+      // Open link in new tab
+      window.open(sklLink, '_blank', 'noopener,noreferrer');
+    }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f031f8963dd5f37',t:'MTc3Njg0NTEyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f032e4034847082',t:'MTc3Njg0NTcyNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
