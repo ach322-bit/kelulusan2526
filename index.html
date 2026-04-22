@@ -326,7 +326,8 @@
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
  </head>
  <body class="h-full overflow-auto">
-  <div id="app-container" class="min-h-full w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden animate-gradient"><!-- Animated Background Elements -->
+  <div id="app-container" class="min-h-full w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden animate-gradient">
+   <!-- Animated Background Elements -->
    <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
@@ -334,7 +335,8 @@
    </div><!-- Confetti Container -->
    <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div><!-- Dramatic Loading Screen -->
    <div id="loading-screen" class="hidden fixed inset-0 z-50 loading-overlay flex flex-col items-center justify-center">
-    <div class="text-center space-y-8"><!-- Animated Circle Spinner -->
+    <div class="text-center space-y-8">
+     <!-- Animated Circle Spinner -->
      <div class="relative flex items-center justify-center">
       <div class="loading-circle"></div>
       <div class="absolute text-6xl loading-pulse">
@@ -343,7 +345,8 @@
      </div><!-- Shimmer Text -->
      <div class="space-y-3">
       <h2 class="text-3xl md:text-4xl font-bold loading-text-shimmer">Mengecek Status Anda</h2>
-      <div class="flex items-center justify-center gap-2 text-purple-300 text-xl loading-dots"><span>•</span> <span>•</span> <span>•</span>
+      <div class="flex items-center justify-center gap-2 text-purple-300 text-xl loading-dots">
+       <span>•</span> <span>•</span> <span>•</span>
       </div>
      </div><!-- Progress Messages -->
      <div class="space-y-2">
@@ -356,10 +359,13 @@
      3
     </div>
    </div><!-- Main Content -->
-   <div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8"><!-- Countdown Timer Section -->
+   <div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8">
+    <!-- Countdown Timer Section -->
     <div id="countdown-section" class="w-full max-w-2xl">
-     <div class="glass-card rounded-3xl p-8 md:p-12 text-center"><!-- Logo -->
-      <div class="mb-6"><img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
+     <div class="glass-card rounded-3xl p-8 md:p-12 text-center">
+      <!-- Logo -->
+      <div class="mb-6">
+       <img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
       </div>
       <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">PENGUMUMAN KELULUSAN<br>
         2025-2026</h1>
@@ -408,13 +414,16 @@
      </div>
     </div><!-- Input Section -->
     <div id="input-section" class="hidden w-full max-w-md">
-     <div class="glass-card rounded-3xl p-8 md:p-10 text-center"><!-- Logo -->
-      <div class="mb-6"><img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
+     <div class="glass-card rounded-3xl p-8 md:p-10 text-center">
+      <!-- Logo -->
+      <div class="mb-6">
+       <img src="https://iili.io/K1DqCs2.png" alt="Logo Sekolah" loading="lazy" class="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain animate-float" onerror="this.src=''; this.alt='Logo tidak tersedia'; this.style.display='none';">
       </div><!-- Title -->
       <h1 id="main-title" class="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">PENGUMUMAN KELULUSAN 2025-2026</h1><!-- Subtitle -->
       <p id="subtitle" class="text-purple-200 text-sm md:text-base mb-8">Silakan masukkan NISN untuk melihat hasil</p><!-- Form -->
       <div class="space-y-4">
-       <div class="relative"><input type="text" id="nisn-input" inputmode="numeric" pattern="[0-9]*" placeholder="Masukkan NISN Anda" class="glass-input w-full px-5 py-4 rounded-xl text-white placeholder-purple-300/60 text-center text-lg focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all duration-300" maxlength="10">
+       <div class="relative">
+        <input type="text" id="nisn-input" inputmode="numeric" pattern="[0-9]*" placeholder="Masukkan NISN Anda" class="glass-input w-full px-5 py-4 rounded-xl text-white placeholder-purple-300/60 text-center text-lg focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all duration-300" maxlength="10">
        </div><button id="check-btn" onclick="checkStatus()" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"> <span id="btn-text">CEK STATUS</span>
         <div id="btn-spinner" class="spinner hidden"></div></button>
       </div><!-- Error Message -->
@@ -427,21 +436,27 @@
       </div>
      </div>
     </div><!-- Result Section -->
-    <div id="result-section" class="hidden w-full max-w-lg"><!-- Status Banner -->
-     <div id="status-banner" class="mb-6 status-banner relative"><!-- Particles for non-eligible -->
+    <div id="result-section" class="hidden w-full max-w-lg">
+     <!-- Status Banner -->
+     <div id="status-banner" class="mb-6 status-banner relative">
+      <!-- Particles for non-eligible -->
       <div id="particles-container" class="hidden absolute inset-0 overflow-hidden rounded-2xl pointer-events-none"></div>
      </div><!-- Result Card -->
      <div id="result-card" class="glass-card rounded-3xl p-8 md:p-10 result-card relative">
       <div class="relative z-10">
        <h2 class="text-xl font-semibold text-white mb-6 text-center">Data Siswa</h2>
        <div class="space-y-4">
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">Nama Lengkap</span> <span id="result-nama" class="text-white font-medium text-right">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
+         <span class="text-purple-200">Nama Lengkap</span> <span id="result-nama" class="text-white font-medium text-right">-</span>
         </div>
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">NISN</span> <span id="result-nisn" class="text-white font-medium">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
+         <span class="text-purple-200">NISN</span> <span id="result-nisn" class="text-white font-medium">-</span>
         </div>
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">No, Urut</span> <span id="result-no-urut" class="text-white font-medium">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
+         <span class="text-purple-200">No, Urut</span> <span id="result-no-urut" class="text-white font-medium">-</span>
         </div>
-        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl"><span class="text-purple-200">Status</span> <span id="result-status" class="font-bold">-</span>
+        <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl">
+         <span class="text-purple-200">Status</span> <span id="result-status" class="font-bold">-</span>
         </div>
        </div>
       </div>
@@ -808,8 +823,8 @@
       console.log('Status mentah:', statusRaw);
       console.log('Status uppercase:', status);
       
-      // Check if status is "LULUS" (not "TIDAK LULUS")
-      const isEligible = !status.includes('TIDAK') && status.includes('LULUS');
+      // Check if status is "LULUS" (treat all students as LULUS by default)
+      const isEligible = !status.includes('TIDAK');
       
       if (isEligible) {
         // Success styling
@@ -900,5 +915,5 @@
       }
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f0310fa737dfd31',t:'MTc3Njg0NDUyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f031f8963dd5f37',t:'MTc3Njg0NTEyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
